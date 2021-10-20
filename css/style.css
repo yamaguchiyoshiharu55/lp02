@@ -89,7 +89,7 @@ img {
     font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
         "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     font-size: 18px;
-    width: 100px;
+    width: 105px;
     text-align: center;
     font-weight: bold;
 }
@@ -347,7 +347,6 @@ img {
 
 /* 調整用css */
 @media screen and (max-width: 1024px) {
-
     /* header */
     .header_nav {
         display: none;
@@ -360,6 +359,7 @@ img {
         height: 100vh;
         background: rgba(000, 000, 000, 0.8);
         width: 100%;
+        z-index: 9999;
     }
 
     .sp_nav ul {
@@ -383,7 +383,7 @@ img {
         position: absolute;
         top: 10px;
         right: 10px;
-        z-index: 100;
+        z-index: 10000;
         cursor: pointer;
         height: 30px;
     }
@@ -460,7 +460,6 @@ img {
 /* スマホ用記述 */
 
 @media screen and (max-width: 767px) {
-
     /* 共通 */
     .container {
         padding: 0 2.66%;

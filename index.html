@@ -15,6 +15,9 @@
     <!-- slickのJavaScript -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <!-- lightbox cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
 </head>
 
 <body>
@@ -126,34 +129,34 @@
             <h2 class="title"><img src="images/gallery@2x.png" alt="ギャラリー"></h2>
             <div class="slider2">
                 <div>
-                    <img src="images/pc_gallary_01-100.jpg" alt="">
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery" data-title="コーヒー">
+                        <img src="images/pc_gallary_01-100.jpg" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="images/pc_gallary_02-100.jpg" alt="">
+                    <a href="images/pc_gallary_02-100.jpg" data-lightbox="gallery" data-title="内装">
+                        <img src="images/pc_gallary_02-100.jpg" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="images/pc_gallary_03-100.jpg" alt="">
+                    <a href="images/pc_gallary_03-100.jpg" data-lightbox="gallery" data-title="内装">
+                        <img src="images/pc_gallary_03-100.jpg" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="images/pc_gallary_04-100.jpg" alt="">
+                    <a href="images/pc_gallary_04-100.jpg" data-lightbox="gallery" data-title="内装">
+                        <img src="images/pc_gallary_04-100.jpg" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="images/pc_gallary_05-100.jpg" alt="">
+                    <a href="images/pc_gallary_05-100.jpg" data-lightbox="gallery" data-title="内装">
+                        <img src="images/pc_gallary_05-100.jpg" alt="">
+                    </a>
                 </div>
                 <div>
-                    <img src="images/pc_gallary_01-100.jpg" alt="">
-                </div>
-                <div>
-                    <img src="images/pc_gallary_02-100.jpg" alt="">
-                </div>
-                <div>
-                    <img src="images/pc_gallary_03-100.jpg" alt="">
-                </div>
-                <div>
-                    <img src="images/pc_gallary_04-100.jpg" alt="">
-                </div>
-                <div>
-                    <img src="images/pc_gallary_05-100.jpg" alt="">
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="gallery" data-title="コーヒー">
+                        <img src="images/pc_gallary_01-100.jpg" alt="">
+                    </a>
                 </div>
             </div>
 
@@ -226,6 +229,10 @@
                     slidesToScroll: 1 // スクロールするスライド数を設定
                 });
             }
+            //            スライダーが2枚になることへの対処
+            $(window).on('load', function() {
+                $('.slick-cloned a').removeAttr('data-lightbox');
+            });
             // スマホハンバーガーメニュー ナビゲーションクリックでも消える
             $('.sp_menu_btn,.sp_nav a').click(function() {
                 $('.sp_nav').fadeToggle();
@@ -244,11 +251,7 @@
                     $('.toTop').fadeOut();
                 }
             });
-        });
-
-        スクロール
-
-        $(function() {
+            // スクロール
             $('a[href^="#"]').click(function() {
                 var href = $(this).attr("href");
                 var target = $(href == "#" || href == "" ? 'html' : href);
