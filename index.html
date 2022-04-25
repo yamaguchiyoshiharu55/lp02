@@ -167,9 +167,9 @@
                 <h2 class="title"><img src="images/event@2x.png" alt="イベント"></h2>
                 <div class="event_wrap">
                     <ul>
-                        <li><a href="">2020.06.23<span class="news_pc">7月はイベント出店のため0/0お休みします</span><span class="news_sp">7月はイベント出店のため0/0・・・</span></a></li>
-                        <li><a href="">2020.03.15<span class="news_pc">春の新商品新発売。話題のあのブランドとコラボ</span><span class="news_sp">春の新商品新発売。話題のあのブ・・・</span></a></li>
-                        <li><a href="">2020.02.06<span class="news_pc">コーヒーの日で30％OFFイベントを開催［3日間限定］</span><span class="news_sp">コーヒーの日で30％OFFイベ・・・</span></a></li>
+                        <li><a href="">2020.06.23<span class="news_pc">7月はイベント出店のため0/0お休みします</span></a></li>
+                        <li><a href="">2020.03.15<span class="news_pc">春の新商品新発売。話題のあのブランドとコラボ</span></a></li>
+                        <li><a href="">2020.02.06<span class="news_pc">コーヒーの日で30％OFFイベントを開催［3日間限定］</span></a></li>
                     </ul>
                 </div>
             </section>
@@ -177,7 +177,7 @@
         <section class="access" id="Access">
             <h2 class="title"><img src="images/access@2x.png" alt="アクセス"></h2>
             <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7177649366186!2d139.69883611514453!3d35.659324680199404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b57f117ddc5%3A0x544794ebbf9d3132!2z6K2m6KaW5bqB5riL6LC36K2m5a-f572yIOa4i-iwt-mnheWJjeS6pOeVqg!5e0!3m2!1sja!2sjp!4v1633520395989!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.396832728099!2d139.7691290152015!3d35.7164578356467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c28f7766d7f%3A0x76b8b5efa1988ef4!2z5LiK6YeO5YuV54mp5ZyS!5e0!3m2!1sja!2sjp!4v1649164627874!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
     </main>
@@ -231,7 +231,9 @@
             }
             //            スライダーが2枚になることへの対処
             $(window).on('load', function() {
-                $('.slick-cloned a').removeAttr('data-lightbox');
+                //                $('.slick-cloned a').removeAttr('data-lightbox');
+                //                $('.slick-cloned').hide();
+                //                $('.slick-cloned a').removeAttr('rel');
             });
             // スマホハンバーガーメニュー ナビゲーションクリックでも消える
             $('.sp_menu_btn,.sp_nav a').click(function() {

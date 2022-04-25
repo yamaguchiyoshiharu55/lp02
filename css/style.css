@@ -290,10 +290,6 @@ img {
     padding-left: 5.47%;
 }
 
-.event_wrap ul .news_sp {
-    display: none;
-}
-
 /* アクセス */
 .access {
     padding-top: 50px;
@@ -347,6 +343,7 @@ img {
 
 /* 調整用css */
 @media screen and (max-width: 1024px) {
+
     /* header */
     .header_nav {
         display: none;
@@ -460,6 +457,7 @@ img {
 /* スマホ用記述 */
 
 @media screen and (max-width: 767px) {
+
     /* 共通 */
     .container {
         padding: 0 2.66%;
@@ -475,20 +473,22 @@ img {
         padding-top: 40px;
         padding-bottom: 30px;
         text-align: center;
+        margin: 0 calc(50% - 50vw);
+        width: 100vw;
     }
 
     .main_text_en {
-        font-size: 17px;
+        font-size: 4.533vw;
         margin-bottom: 30px;
     }
 
     .main_text {
-        font-size: 8.5vw;
+        font-size: 10.133vw;
         margin-bottom: 21px;
     }
 
     .sub_text {
-        font-size: 16px;
+        font-size: 4.267vw;
         line-height: 1.875;
     }
 
@@ -625,12 +625,11 @@ img {
         padding-left: 0;
     }
 
-    .event_wrap ul .news_sp {
-        display: block;
-    }
-
     .event_wrap ul .news_pc {
-        display: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
     }
 
     /* アクセス */
@@ -676,4 +675,9 @@ img {
         font-size: 16px;
         margin-bottom: 30px;
     }
+}
+
+/*ライトボックス対応*/
+.lb-data .lb-number {
+    /*    display: none !important;*/
 }
