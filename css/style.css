@@ -679,5 +679,5 @@ img {
 
 /*ライトボックス対応*/
 .lb-data .lb-number {
-    /*    display: none !important;*/
+    display: none !important;
 }
